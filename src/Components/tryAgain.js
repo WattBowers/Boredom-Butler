@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../App.css';
 
 const TryAgain = ({ another, movie }) => {
     if(Object.keys(movie).length !== 0) {

@@ -3,12 +3,13 @@ import StarLinks from './StarLinks/starLinks';
 import './info.css';
 
 
-const Info = ({ movie, another }) => {
+const Info = ({ movie, loading }) => {
     
     
     
     if(Object.keys(movie).length !== 0){
-         return (
+        
+        return ( 
             <div className='innertv'>
                 <h1>{movie.title}</h1>
                 <h2 className='rating'>{'Rating:  ' + movie.imDbRating + '/10'}</h2>

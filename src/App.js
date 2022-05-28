@@ -15,7 +15,7 @@ import TryAgain from './Components/tryAgain';
     const [genre, setGenre] = useState('Genre');
     const [list, setList] = useState({});
     const [movie, setMovie] = useState({});
-
+    const [loading, setLoading] = useState(false);
 
 
     function randomIntFromInterval(min, max) {
@@ -62,11 +62,10 @@ import TryAgain from './Components/tryAgain';
       fetch(`https://imdb-api.com/API/AdvancedSearch/k_ejq18fu9?title_type=${changeType(type)}&user_rating=${changeRating(rating)}&release_date=${decadeFinal}&num_votes100,9999999&genres=${genre}&languages=en&sort=num_votes,desc`)
      .then(response => response.json())
      .then(response => {
-       console.log(response);
        setList(response);
        chooseAMovie(response.results.length, response.results);
        });
-       
+       setLoading(true);
     }
 
     
@@ -140,7 +139,7 @@ import TryAgain from './Components/tryAgain';
           <TryAgain movie={movie} another={tryAgain} className='another'/>
         </div>
         <div className='border'>
-          <Info movie={movie} another={tryAgain}/>
+          <Info movie={movie} loading={loading}/>
           <Poster movie={movie}/>
         </div>
       </div>
