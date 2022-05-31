@@ -65,6 +65,7 @@ import Popup from 'reactjs-popup';
      .then(response => response.json())
      .then(response => {
         if(response.errorMessage === "Server busy") {
+          console.log("server is busy")
           window.alert("The ImDb server is currently busy. Please try again later!")
         } else {
           setList(response);
