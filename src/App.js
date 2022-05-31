@@ -83,7 +83,6 @@ import Popup from 'reactjs-popup';
     const chooseAMovie = (length, movieList) => {
      let rndInt = randomIntFromInterval(0, length - 1);
      setMovie(movieList[rndInt])
-     console.log(movie);
     }
   
 
