@@ -61,7 +61,7 @@ import Popup from 'reactjs-popup';
       const decadeFinal = decadeApi.replace(/\"/g, "");
 
       
-      fetch(`https://imdb-api.com/API/AdvancedSearch/k_ejq18fu9?title_type=${changeType(type)}&user_rating=${changeRating(rating)}&release_date=${decadeFinal}&num_votes100,9999999&genres=${genre}&languages=en&sort=num_votes,desc`)
+      fetch(`https://imdb-api.com/API/AdvancedSearch/?title_type=${changeType(type)}&user_rating=${changeRating(rating)}&release_date=${decadeFinal}&num_votes100,9999999&genres=${genre}&languages=en&sort=num_votes,desc`)
      .then(response => response.json())
      .then(response => {
         if(response.errorMessage === "Server busy") {
