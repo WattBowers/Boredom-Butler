@@ -12,6 +12,6 @@ My biggest take away from this project was how to write React in a more modern s
 
 This website is hosted on Heroku. Feel free to clone the code and see how I built it. you will need your own imDb key to use the api. 
 
-If you just want to play around in the live site here is the link: [https://face-finding-project.herokuapp.com/ ](https://the-boredom-butler.herokuapp.com/)
+If you just want to play around in the live site here is the link: https://the-boredom-butler.herokuapp.com/
 
 Because I am using the free Heroku service the website can take some time to load. You may have to wait up to ten seconds depending on your connection. 
